@@ -6,9 +6,13 @@
     </div>
 </template>
 <script>
+import cats from '@/data/cats'
+
 export default {
-    data(){
-        
+    data() {
+        return {
+            cats
+        }
     }
 }
 </script>
