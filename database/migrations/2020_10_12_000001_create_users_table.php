@@ -23,6 +23,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+           
+        });
+
+        schema::table('users',function($table){
             $table->foreign('i_id')->references('id')->on('images');
         });
     }

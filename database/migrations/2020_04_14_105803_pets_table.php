@@ -20,8 +20,12 @@ class PetsTable extends Migration
             $table->integer('c_id')->unsigned();
             $table->integer('i_id')->unsigned();
             $table->timestamps();
-           $table->foreign('c_id')->reference('id')->on('categorys');
-            $table->foreign('i_id')->reference('id')->on('images');
+           
+        });
+
+        schema::table('pets',function(blueprint $table){
+            $table->foreign('c_id')->references('id')->on('categorys');
+            $table->foreign('i_id')->references('id')->on('images');
         });
 
     }

@@ -20,6 +20,10 @@ class PostsTable extends Migration
             $table->integer('c_id')->unsigned();
             $table->integer('status');
             $table->timestamps();
+           
+        });
+
+        schema::table('posts',function($table){
             $table->foreign('p_id')->references('id')->on('pets');
             $table->foreign('c_id')->references('id')->on('categorys');
             $table->foreign('u_id')->references('id')->on('users');
