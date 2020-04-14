@@ -9,7 +9,7 @@ class post extends Model
     public $table = "posts";
 
     public function user(){
-        return $this->hasone('App\user'); 
+        return $this->belongsTo('App\user'); 
     }
     public function category(){
         return $this->hasone('App\category'); 
